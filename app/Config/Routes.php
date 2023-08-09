@@ -38,6 +38,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('guru', 'Guru::index');
+$routes->get('guru/add', 'Guru::create');
+$routes->post('guru/store', 'Guru::store');
+$routes->get('guru/edit/(:num)', 'Guru::edit/$1');
+$routes->get('guru/destroy/(:num)', 'Guru::destroy/$1');
+
 
 /*
  * --------------------------------------------------------------------
