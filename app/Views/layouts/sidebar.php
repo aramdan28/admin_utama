@@ -4,14 +4,14 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
         <li class="nav-item">
-            <a class="nav-link " href="index.html">
+            <a class="nav-link " href="<?= base_url('/'); ?>">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-item">
-            <a class="nav-link " href="DataGuru.html">
+            <a class="nav-link " href="<?= base_url('guru'); ?>">
                 <i class="bi bi-layout-text-window-reverse"></i><span>Data Guru</span>
             </a>
             <ul id="DataGuru-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
