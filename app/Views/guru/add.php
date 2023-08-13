@@ -145,14 +145,14 @@ Data Guru
                             </div>
 
                         </div>
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <label for="inputState" class="form-label">Jabatan</label>
                             <input type="text" class="form-control" id="inputName5" name="jabatan" placeholder="Isikan Jabatan Anda">
                             <div class="text-danger">
 
                             </div>
 
-                        </div>
+                        </div> -->
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">Golongan</label>
                             <select name="golongan" id="" class="form-control">

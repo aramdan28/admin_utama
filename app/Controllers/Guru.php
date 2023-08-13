@@ -16,10 +16,14 @@ class Guru extends BaseController
 
     public function index()
     {
-        // $model = new UserModel();
-        $data['users'] = $this->UserModel->findAll();
-        // dd($data);
+        $selectedInstansi = $this->request->getVar('inputDataGuru');
 
+        $query = $this->UserModel->where('jabatan', 'Guru');
+        if (!empty($selectedInstansi) && $selectedInstansi != 'Pilih Asal Sekolah') {
+            $query = $query->where('instansi', $selectedInstansi);
+        }
+
+        $data['users'] = $query->findAll();
         return view('guru/index', $data);
     }
     public function create()
@@ -45,7 +49,7 @@ class Guru extends BaseController
             'hp'                    => $this->request->getPost('hp'),
             'pend_terakhir'         => $this->request->getPost('pend_terakhir'),
             'jurusan'               => $this->request->getPost('jurusan'),
-            'jabatan'               => $this->request->getPost('jabatan'),
+            'jabatan'               => 'Guru',
             'golongan'              => $this->request->getPost('golongan'),
             'status'                => $this->request->getPost('status'),
             'alamat'                => $this->request->getPost('alamat'),

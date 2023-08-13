@@ -9,10 +9,30 @@ Data Guru
 <section class="section">
     <div class="row">
         <div class="col-lg-12">
-
             <div class="card p-3">
                 <div class="card-header">
                     <h3 class="card-title">Data Guru</h3>
+                    <div class="col">
+                        <form method="get">
+                            <div class="row mb-3">
+                                <label for="inputDataGuru" class="col-sm-2 col-form-label">Asal Sekolah</label>
+                                <div class="col-sm-10">
+                                    <select class="form-select" aria-label="Default select example" id="inputDataGuru" name="inputDataGuru">
+                                        <option selected>Pilih Asal Sekolah</option>
+                                        <?php foreach ($users as $key => $guru) : ?>
+                                        <option value="<?= $guru['instansi'] ?>"><?= $guru['instansi'] ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class=" d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="Cari" class="btn btn-primary" href="CariDataGuru.html">Cari</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <br>
                     <a href="<?= base_url('guru/add'); ?>" class="btn btn-primary" style="float: right">
                         <i class="bi bi-plus-circle-fill"></i>
                         Tambah Data</a>
